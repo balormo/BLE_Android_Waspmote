@@ -242,7 +242,7 @@ public class DeviceControlActivity extends Activity {
 
     private void displayData(String data_t, String data_h) {
         if (data_t != null) {
-            mDataField_t.setText(data_t);
+            mDataField_t.setText((String)data_t);
         }
         if (data_h != null) {
             mDataField_h.setText(data_h);

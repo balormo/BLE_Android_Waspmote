@@ -1,14 +1,14 @@
 [
     {
-        "merged": "C:\\BLE\\BluetoothLeGatt5\\Application\\build\\intermediates\\res\\merged\\debug\\layout\\listitem_device.xml",
-        "source": "C:\\BLE\\BluetoothLeGatt5\\Application\\src\\main\\res\\layout\\listitem_device.xml"
+        "merged": "C:\\BLE\\BLE_Android_Waspmote\\Application\\build\\intermediates\\res\\merged\\debug\\layout\\actionbar_indeterminate_progress.xml",
+        "source": "C:\\BLE\\BLE_Android_Waspmote\\Application\\src\\main\\res\\layout\\actionbar_indeterminate_progress.xml"
     },
     {
-        "merged": "C:\\BLE\\BluetoothLeGatt5\\Application\\build\\intermediates\\res\\merged\\debug\\layout\\actionbar_indeterminate_progress.xml",
-        "source": "C:\\BLE\\BluetoothLeGatt5\\Application\\src\\main\\res\\layout\\actionbar_indeterminate_progress.xml"
+        "merged": "C:\\BLE\\BLE_Android_Waspmote\\Application\\build\\intermediates\\res\\merged\\debug\\layout\\listitem_device.xml",
+        "source": "C:\\BLE\\BLE_Android_Waspmote\\Application\\src\\main\\res\\layout\\listitem_device.xml"
     },
     {
-        "merged": "C:\\BLE\\BluetoothLeGatt5\\Application\\build\\intermediates\\res\\merged\\debug\\layout\\gatt_services_characteristics.xml",
-        "source": "C:\\BLE\\BluetoothLeGatt5\\Application\\src\\main\\res\\layout\\gatt_services_characteristics.xml"
+        "merged": "C:\\BLE\\BLE_Android_Waspmote\\Application\\build\\intermediates\\res\\merged\\debug\\layout\\gatt_services_characteristics.xml",
+        "source": "C:\\BLE\\BLE_Android_Waspmote\\Application\\src\\main\\res\\layout\\gatt_services_characteristics.xml"
     }
 ]

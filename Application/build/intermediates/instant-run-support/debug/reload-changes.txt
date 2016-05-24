@@ -1,9 +1,2 @@
-CHANGED,C:\BLE\BluetoothLeGatt5\Application\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\android\bluetoothlegatt\DeviceControlActivity$4$override.class
-CHANGED,C:\BLE\BluetoothLeGatt5\Application\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\android\bluetoothlegatt\DeviceControlActivity$3$override.class
-CHANGED,C:\BLE\BluetoothLeGatt5\Application\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\android\bluetoothlegatt\BluetoothLeService$override.class
-CHANGED,C:\BLE\BluetoothLeGatt5\Application\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\android\bluetoothlegatt\DeviceControlActivity$override.class
-CHANGED,C:\BLE\BluetoothLeGatt5\Application\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\android\tools\fd\runtime\AppPatchesLoaderImpl.class
-CHANGED,C:\BLE\BluetoothLeGatt5\Application\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\android\bluetoothlegatt\DeviceControlActivity$2$override.class
-CHANGED,C:\BLE\BluetoothLeGatt5\Application\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\android\bluetoothlegatt\BluetoothLeService$1$override.class
-CHANGED,C:\BLE\BluetoothLeGatt5\Application\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\android\bluetoothlegatt\DeviceControlActivity$1$override.class
-CHANGED,C:\BLE\BluetoothLeGatt5\Application\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\android\bluetoothlegatt\BluetoothLeService$LocalBinder$override.class
+CHANGED,C:\BLE\BLE_Android_Waspmote\Application\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\android\tools\fd\runtime\AppPatchesLoaderImpl.class
+CHANGED,C:\BLE\BLE_Android_Waspmote\Application\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\android\bluetoothlegatt\BluetoothLeService$override.class

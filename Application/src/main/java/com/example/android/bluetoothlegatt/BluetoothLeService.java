@@ -140,10 +140,20 @@ public class BluetoothLeService extends Service {
                 format = BluetoothGattCharacteristic.FORMAT_UINT8;
                 Log.d(TAG, "DATA format UINT8.");
             }
-            final int dato = characteristic.getIntValue(format, 0);//ESTE 0 estaba a 1 y daba error
-
-            Log.d(TAG, String.format("Received DATA: %d", dato));
-            intent.putExtra(EXTRA_DATA_T, String.valueOf(dato));
+            //final int dato = characteristic.getIntValue(format, 0);//ESTE 0 estaba a 1 y daba error
+            // For all other profiles, writes the data formatted in HEX.
+            final byte[] dato = characteristic.getValue();
+            if (dato != null && dato.length > 0) {
+                final StringBuilder stringBuilder = new StringBuilder(dato.length);
+                for(byte byteChar : dato)
+                    stringBuilder.append(String.format("%02X ", byteChar));
+                    //stringBuilder.append(String.format("%1d ", byteChar));
+                intent.putExtra(EXTRA_DATA_T,  stringBuilder.toString());
+            }
+            //final int dato = Integer.parseInt( characteristic.getStringValue(0));
+           // Log.d(TAG, "Received DATA: " + dato);
+            //intent.putExtra(EXTRA_DATA_T, String.valueOf(dato));
+            //intent.putExtra(EXTRA_DATA_T, String.valueOf(dato));
         }
         if (UUID_USER_SERVICE_1_CHAR6.equals(characteristic.getUuid())) {
             int flag = characteristic.getProperties();

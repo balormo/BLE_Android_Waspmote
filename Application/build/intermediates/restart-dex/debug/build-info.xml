@@ -3,29 +3,21 @@
     abi="armeabi-v7a,armeabi"
     api-level="19"
     format="7"
-    timestamp="31626261478621" >
+    timestamp="21632430134958" >
 
     <task
         name="javac"
-        duration="866" />
+        duration="0" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="495" />
+        duration="0" />
     <task
         name="verifier"
-        duration="70" />
+        duration="0" />
 
-    <artifact
-        location="C:\BLE\BluetoothLeGatt5\Application\build\outputs\apk\Application-debug.apk"
-        type="MAIN" />
-
-    <build timestamp="31626261478621" >
-        <artifact
-            location="C:\BLE\BluetoothLeGatt5\Application\build\outputs\apk\Application-debug.apk"
-            type="MAIN" />
-    </build>
+    <build timestamp="21632430134958" />
 
 </instant-run>
