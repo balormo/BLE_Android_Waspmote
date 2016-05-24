@@ -3,21 +3,29 @@
     abi="armeabi-v7a,armeabi"
     api-level="19"
     format="7"
-    timestamp="21632430134958" >
+    timestamp="9597931281410" >
 
     <task
         name="javac"
-        duration="0" />
+        duration="2454" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="0" />
+        duration="249" />
     <task
         name="verifier"
-        duration="0" />
+        duration="97" />
 
-    <build timestamp="21632430134958" />
+    <artifact
+        location="C:\BLE\BLE_Android_Waspmote\Application\build\outputs\apk\Application-debug.apk"
+        type="MAIN" />
+
+    <build timestamp="9597931281410" >
+        <artifact
+            location="C:\BLE\BLE_Android_Waspmote\Application\build\outputs\apk\Application-debug.apk"
+            type="MAIN" />
+    </build>
 
 </instant-run>

@@ -61,15 +61,11 @@ public class BluetoothLeService extends Service {
     public final static String ACTION_DATA_AVAILABLE =
             "com.example.bluetooth.le.ACTION_DATA_AVAILABLE";
     public final static String EXTRA_DATA_T= "com.example.bluetooth.le.EXTRA_DATA_T";
-    public final static String EXTRA_DATA_H= "com.example.bluetooth.le.EXTRA_DATA_H";
-    public final static UUID UUID_HEART_RATE_MEASUREMENT =
-            UUID.fromString(SampleGattAttributes.HEART_RATE_MEASUREMENT);
-    //CARACTERISTICA PARA PRESENTAR TEMPERATURA
+
+    //CARACTERISTICA PARA PRESENTAR TEMPERATURA-HUMEDAD y LUZ
     public final static UUID UUID_USER_SERVICE_1_CHAR4 =
             UUID.fromString(SampleGattAttributes.USER_SERVICE_1_CHAR4);
-    //CARACTERISTICA PARA PRESENTAR HUMEDAD
-    public final static UUID UUID_USER_SERVICE_1_CHAR6 =
-            UUID.fromString(SampleGattAttributes.USER_SERVICE_1_CHAR6);
+
     // Implements callback methods for GATT events that the app cares about.  For example,
     // connection change and services discovered.
     private final BluetoothGattCallback mGattCallback = new BluetoothGattCallback() {
@@ -155,22 +151,7 @@ public class BluetoothLeService extends Service {
             //intent.putExtra(EXTRA_DATA_T, String.valueOf(dato));
             //intent.putExtra(EXTRA_DATA_T, String.valueOf(dato));
         }
-        if (UUID_USER_SERVICE_1_CHAR6.equals(characteristic.getUuid())) {
-            int flag = characteristic.getProperties();
-            int format = -1;
-            if ((flag & 0x01) != 0) {
-                format = BluetoothGattCharacteristic.FORMAT_UINT16;
-                Log.d(TAG, "DATA format UINT16.");
-            } else {
-                format = BluetoothGattCharacteristic.FORMAT_UINT8;
-                Log.d(TAG, "DATA format UINT8.");
-            }
-            final int dato = characteristic.getIntValue(format, 0);//ESTE 0 estaba a 1 y daba error
-
-            Log.d(TAG, String.format("Received DATA: %d", dato));
-            intent.putExtra(EXTRA_DATA_H, String.valueOf(dato));
-
-        } /*else {
+        /*else {
             // For all other profiles, writes the data formatted in HEX.
             final byte[] data = characteristic.getValue();
             if (data != null && data.length > 0) {
@@ -334,13 +315,7 @@ public class BluetoothLeService extends Service {
             descriptor.setValue(BluetoothGattDescriptor.ENABLE_NOTIFICATION_VALUE);
             mBluetoothGatt.writeDescriptor(descriptor);
         }
-        // This is specific to USER_SERVICE_1 CHARACTERISTIC 6
-        if (UUID_USER_SERVICE_1_CHAR6.equals(characteristic.getUuid())) {
-            BluetoothGattDescriptor descriptor = characteristic.getDescriptor(
-                    UUID.fromString(SampleGattAttributes.CLIENT_CHARACTERISTIC_CONFIG));
-            descriptor.setValue(BluetoothGattDescriptor.ENABLE_NOTIFICATION_VALUE);
-            mBluetoothGatt.writeDescriptor(descriptor);
-        }
+
     }
 
     /**

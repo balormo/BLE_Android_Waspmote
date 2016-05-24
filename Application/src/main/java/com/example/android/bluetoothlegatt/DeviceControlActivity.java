@@ -55,6 +55,7 @@ public class DeviceControlActivity extends Activity {
     private TextView mConnectionState;
     private TextView mDataField_t;
     private TextView mDataField_h;
+    private TextView mDataField_l;
     private String mDeviceName;
     private String mDeviceAddress;
     private ExpandableListView mGattServicesList;
@@ -109,8 +110,7 @@ public class DeviceControlActivity extends Activity {
                 // Show all the supported services and characteristics on the user interface.
                 displayGattServices(mBluetoothLeService.getSupportedGattServices());
             } else if (BluetoothLeService.ACTION_DATA_AVAILABLE.equals(action)) {
-                displayData(intent.getStringExtra(BluetoothLeService.EXTRA_DATA_T),
-                            intent.getStringExtra(BluetoothLeService.EXTRA_DATA_H));
+                displayData(intent.getStringExtra(BluetoothLeService.EXTRA_DATA_T));
 
             }
         }
@@ -154,6 +154,7 @@ public class DeviceControlActivity extends Activity {
         mGattServicesList.setAdapter((SimpleExpandableListAdapter) null);
         mDataField_t.setText(R.string.no_data);
         mDataField_h.setText(R.string.no_data);
+        mDataField_l.setText("No data");
     }
 
     @Override
@@ -172,6 +173,7 @@ public class DeviceControlActivity extends Activity {
         mConnectionState = (TextView) findViewById(R.id.connection_state);
         mDataField_t = (TextView) findViewById(R.id.data_value);
         mDataField_h = (TextView) findViewById(R.id.data_value2);
+        mDataField_l = (TextView) findViewById(R.id.data_value3);
 
         getActionBar().setTitle(mDeviceName);
         getActionBar().setDisplayHomeAsUpEnabled(true);
@@ -240,13 +242,13 @@ public class DeviceControlActivity extends Activity {
         });
     }
 
-    private void displayData(String data_t, String data_h) {
+    private void displayData(String data_t) {
         if (data_t != null) {
-            mDataField_t.setText((String)data_t);
+            mDataField_t.setText((String)data_t.substring(0,5));
+            mDataField_h.setText((String)data_t.substring(5,11));
+            mDataField_l.setText((String)data_t.substring(11,17));
         }
-        if (data_h != null) {
-            mDataField_h.setText(data_h);
-        }
+
     }
 
     // Demonstrates how to iterate through the supported GATT Services/Characteristics.
